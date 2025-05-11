@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade In</title>
+    <style>
+        .fadeIn {
+            animation-name: fade;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .bounce {
+            width: 80px;
+            height: 80px;
+            background-color: coral;
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-50px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="fadeIn">Web Application Developer</h1>
+
+    <div class="bounce"></div>
+</body>
+
+</html>

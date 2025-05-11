@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Translate Clone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="app-title"><i class="fas fa-language"></i> Text Translator</h1>
+        
+        <div class="language-controls">
+            <div class="language-selector">
+                <label for="sourceLanguage">Source Language:</label>
+                <select id="sourceLanguage" class="language-dropdown"></select>
+            </div>
+            
+            <button class="swap-btn" onclick="swapLanguages()">
+                <i class="fas fa-exchange-alt"></i>
+            </button>
+            
+            <div class="language-selector">
+                <label for="targetLanguage">Target Language:</label>
+                <select id="targetLanguage" class="language-dropdown"></select>
+            </div>
+        </div>
+        
+        <div class="translation-boxes">
+            <div class="text-box-container">
+                <textarea id="source" class="text-box" placeholder="Enter text to translate..."></textarea>
+                <div class="text-box-footer">
+                    <button class="clear-btn" onclick="clearSource()">
+                        <i class="fas fa-times"></i> Clear
+                    </button>
+                    <span class="char-count" id="sourceCharCount">0/5000</span>
+                </div>
+            </div>
+            
+            <div class="text-box-container">
+                <textarea id="target" class="text-box" placeholder="Translation will appear here..." readonly></textarea>
+                <div class="text-box-footer">
+                    <button class="copy-btn" onclick="copyTranslation()">
+                        <i class="far fa-copy"></i> Copy
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <button class="translate-btn" onclick="convert()">
+            <i class="fas fa-exchange-alt"></i> Translate
+        </button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

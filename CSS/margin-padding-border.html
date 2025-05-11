@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin Padding Border</title>
+    <style>
+        #main-container{
+
+            margin-top: 200px;
+            margin-left: 300px;
+            margin-right: 300px;
+
+            border-top-width: 20px;
+            border-left-width: 20px;
+            border-right-width: 20px;
+            border-bottom-width: 20px;
+
+            border-style: inset;
+            border-color: rgb(18, 18, 232);
+
+            padding-top: 50px;
+            padding-bottom: 60px;
+            padding-left:50px;
+
+            animation-name: borderanimation;
+            animation-iteration-count: infinite;
+            animation-duration: 2s;
+        }
+
+        @keyframes borderanimation {
+            0%{
+                border-style: inset;
+                border-color: rgb(223, 7, 7);
+            }
+            20%{
+                border-style: inset;
+                border-color: rgb(235, 25, 203);
+            }
+            30%{
+                border-style: inset;
+                border-color: rgb(96, 18, 221);
+            }
+            40%{
+                border-style: inset;
+                border-color: rgb(27, 31, 248);
+            }
+            50%{
+                border-style: inset;
+                border-color: rgb(18, 114, 224);
+            }
+            60%{
+                border-style: inset;
+                border-color: rgb(18, 238, 224);
+            }
+            70%{
+                border-style: inset;
+                border-color: rgb(13, 223, 90);
+            }
+            70%{
+                border-style: inset;
+                border-color: rgb(84, 239, 17);
+            }
+            80%{
+                border-style: inset;
+                border-color: rgb(231, 231, 21);
+            }
+            90%{
+                border-style: inset;
+                border-color: rgb(236, 158, 14);
+            }
+            100%{
+                border-style: inset;
+                border-color: rgb(242, 11, 11);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="main-container">
+
+        <div>
+            <label for="username">Username</label>
+            <input type="text" id="username">
+        </div>
+
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password">
+        </div>
+
+        <div>
+            <button>Submit</button>
+            <button>Reset</button>
+        </div>
+    </div>
+</body>
+
+</html>

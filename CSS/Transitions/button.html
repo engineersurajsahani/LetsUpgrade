@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <style>
+        body{
+            text-align: center;
+        }
+
+        .btn{
+            background-color: blue;
+            color: white;
+            padding: 50px;
+            transition: background-color 0.5s ease-out;
+            
+        }
+
+        .btn:hover{
+            background-color: red;
+        }
+
+        .box{
+            width: 100px;
+            height: 100px;
+            background:green;
+            transition: width 1s ease , height 1s ease;
+        }
+
+        .box:hover{
+            width: 200px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">Hover Me!</button>
+
+    <div class="box">
+        Software Engineer
+    </div>
+</body>
+</html>

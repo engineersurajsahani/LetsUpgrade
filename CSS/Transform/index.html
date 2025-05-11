@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .rotate-box{
+            display: inline-block;
+            transition: transform 0.5s;
+        }
+
+        .rotate-box:hover{
+            transform: rotate(360deg);
+        }
+
+        .zoom{
+            display: inline-block;
+            transition: transform 0.5s;
+        }
+
+        .zoom:hover{
+            transform: scale(1.5);
+        }
+
+        .moveX{
+            display: inline-block;
+            transition: transform 0.5s;
+        }
+
+        .moveX:hover{
+            transform: translateX(100px);
+        }
+
+        .moveY{
+            display: inline-block;
+            transition: transform 0.5s;
+        }
+
+        .moveY:hover{
+            transform: translateY(100px);
+        }
+    </style>
+</head>
+<body>
+    <div class="rotate-box">🔄</div>
+    <div class="zoom">🔄</div>
+    <div class="moveX">🔄</div>
+    <div class="moveY">🔄</div>
+</body>
+</html>

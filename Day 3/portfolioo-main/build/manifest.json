@@ -1,0 +1,27 @@
+{
+    "short_name": "Suraj's Portfolio",
+    "name": "Software Engineer Suraj Sahani | Portfolio",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "description": "Explore the portfolio of Engineer Suraj Sahani, showcasing skills in web development, machine learning, and IT training.",
+    "icons": [
+      {
+        "src": "engineersurajsahani.jpeg",
+        "sizes": "64x64 32x32 24x24 16x16",
+        "type": "image/x-icon"
+      },
+      {
+        "src": "engineersurajsahani.jpeg",
+        "type": "image/jpeg",
+        "sizes": "192x192"
+      },
+      {
+        "src": "engineersurajsahani.jpeg",
+        "type": "image/jpeg",
+        "sizes": "512x512"
+      }
+    ]
+  }
+  

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Elevate Coders Institute</title>
+    <!-- MDB UI Kit -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f0f0f, #1a1a1a, #2b2b2b);
+            min-height: 100vh;
+        }
+
+        .about-section {
+            padding: 100px 0;
+            color: white;
+        }
+
+        .profile-card {
+            background: rgba(30, 30, 30, 0.7);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .profile-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(255, 0, 222, 0.3);
+        }
+
+        .profile-img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px 20px 0 0;
+            transition: all 0.5s ease;
+        }
+
+        .profile-card:hover .profile-img {
+            transform: scale(1.05);
+        }
+
+        .profile-content {
+            padding: 30px;
+        }
+
+        .profile-title {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #fff;
+            position: relative;
+            display: inline-block;
+        }
+
+        .profile-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #00b7ff, #ff00de);
+        }
+
+        .profile-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 20px;
+        }
+
+        .skills-section {
+            margin-top: 50px;
+        }
+
+        .skill-item {
+            margin-bottom: 20px;
+        }
+
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .skill-bar {
+            height: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #00b7ff, #ff00de);
+            border-radius: 5px;
+            transition: width 1.5s ease;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 50px auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background: linear-gradient(to bottom, #00b7ff, #ff00de);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            border-radius: 10px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background: linear-gradient(135deg, #00b7ff, #ff00de);
+            border-radius: 50%;
+            top: 15px;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .left::after {
+            right: -12px;
+        }
+
+        .right::after {
+            left: -12px;
+        }
+
+        .timeline-content {
+            padding: 20px 30px;
+            background: rgba(30, 30, 30, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 0, 222, 0.3);
+        }
+
+        .timeline-date {
+            color: #ff00de;
+            font-weight: bold;
+        }
+
+        .timeline-title {
+            margin: 10px 0;
+            color: white;
+        }
+
+        .timeline-text {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+    </style>
+    <link rel="stylesheet" href="neon-text.css">
+</head>
+
+<body>
+    <!-- Navbar (same as home.html) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="background: rgba(15, 15, 15, 0.8) !important; backdrop-filter: blur(10px);">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html">
+                <span class="neon" style="font-size: 1.5rem;">Elevate Coders</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-mdb-collapse-init data-mdb-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="courses.html"><i class="fas fa-graduation-cap me-2"></i>Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html"><i class="fas fa-user me-2"></i>About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><i class="fas fa-envelope me-2"></i>Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <a class="btn btn-outline-light btn-rounded me-3" href="#" role="button">
+                        <i class="fas fa-shopping-cart me-2"></i>Enroll Now
+                    </a>
+                    <div class="dropdown">
+                        <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar" role="button" data-mdb-dropdown-init aria-expanded="false">
+                            <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="35" alt="Profile" loading="lazy" />
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user-circle me-2"></i>My Profile</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="profile-card fade-in">
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                                <img src="images/surajsahani.jpeg" class="profile-img" alt="Suraj Sahani">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="profile-content">
+                                    <h2 class="profile-title">Suraj Sahani</h2>
+                                    <h5 class="text-primary mb-4">Software Engineer & Educator</h5>
+                                    <p class="profile-text">
+                                        Hi, I am Suraj Sahani, a passionate Software Engineer and Educator. I embarked on my journey in 2020 and have since gained expertise in various technologies and frameworks, focusing on both frontend and backend development.
+                                    </p>
+                                    <p class="profile-text">
+                                        In addition to my development work, I have a strong passion for teaching and sharing knowledge. I've worked as an Assistant Professor in the CS/IT Department at Yashwantrao Chavan College, Navi Mumbai. I also serve as an IT Trainer at Disha Computer Institute and as a Web Application Development Trainer at Effilearn.
+                                    </p>
+                                    <p class="profile-text">
+                                        Currently, I am working as a Full Stack Developer at Octalogic Tech, where I combine my technical skills with my love for mentoring to help shape the next generation of developers.
+                                    </p>
+                                    <div class="d-flex gap-3">
+                                        <a href="#" class="btn btn-primary btn-rounded" style="background: linear-gradient(135deg, #00b7ff, #0088cc);">
+                                            <i class="fas fa-download me-2"></i>Download CV
+                                        </a>
+                                        <a href="contact.html" class="btn btn-outline-light btn-rounded">
+                                            <i class="fas fa-envelope me-2"></i>Contact Me
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="skills-section slide-up" style="animation-delay: 0.3s;">
+                <div class="row justify-content-center mt-5">
+                    <div class="col-lg-10">
+                        <h3 class="text-center mb-5 neon">My Skills</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="skill-item">
+                                    <div class="skill-name">
+                                        <span>Web Development</span>
+                                        <span>95%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-name">
+                                        <span>JavaScript</span>
+                                        <span>90%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-name">
+                                        <span>React</span>
+                                        <span>85%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="skill-item">
+                                    <div class="skill-name">
+                                        <span>Node.js</span>
+                                        <span>88%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 88%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-name">
+                                        <span>Teaching</span>
+                                        <span>92%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 92%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-name">
+                                        <span>MongoDB</span>
+                                        <span>80%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Section -->
+            <div class="timeline-section slide-up" style="animation-delay: 0.6s;">
+                <div class="row justify-content-center mt-5">
+                    <div class="col-lg-10">
+                        <h3 class="text-center mb-5 neon">My Journey</h3>
+                        <div class="timeline">
+                            <div class="timeline-item left">
+                                <div class="timeline-content">
+                                    <div class="timeline-date">2020 - Present</div>
+                                    <h4 class="timeline-title">Full Stack Developer</h4>
+                                    <p class="timeline-text">Octalogic Tech</p>
+                                    <p class="timeline-text">Developing and maintaining web applications using modern technologies.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item right">
+                                <div class="timeline-content">
+                                    <div class="timeline-date">2019 - Present</div>
+                                    <h4 class="timeline-title">Assistant Professor</h4>
+                                    <p class="timeline-text">Yashwantrao Chavan College</p>
+                                    <p class="timeline-text">Teaching computer science and IT courses to undergraduate students.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item left">
+                                <div class="timeline-content">
+                                    <div class="timeline-date">2018 - Present</div>
+                                    <h4 class="timeline-title">IT Trainer</h4>
+                                    <p class="timeline-text">Disha Computer Institute</p>
+                                    <p class="timeline-text">Conducting training sessions on various programming languages and technologies.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item right">
+                                <div class="timeline-content">
+                                    <div class="timeline-date">2017 - 2020</div>
+                                    <h4 class="timeline-title">Web Development Trainer</h4>
+                                    <p class="timeline-text">Effilearn</p>
+                                    <p class="timeline-text">Training students in web application development technologies.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Animate skill bars on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const skillBars = document.querySelectorAll('.skill-progress');
+            
+            const animateSkills = function() {
+                skillBars.forEach(bar => {
+                    const barPosition = bar.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (barPosition < windowHeight - 100) {
+                        bar.style.width = bar.parentElement.previousElementSibling.lastElementChild.textContent;
+                    }
+                });
+            };
+            
+            window.addEventListener('scroll', animateSkills);
+            animateSkills(); // Run once on load
+        });
+    </script>
+</body>
+
+</html>

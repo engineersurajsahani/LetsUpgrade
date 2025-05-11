@@ -1,0 +1,38 @@
+@font-face {
+	font-family: Museo;
+	src: url("https://s.cdpn.io/26175/Museo300-Regular.otf") format("opentype");
+}
+
+.neon {
+  text-align: center;
+  margin: 30px auto;
+  font-family: "Museo";
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #fff;
+  -webkit-animation:pulse 1.5s ease-in-out infinite alternate;
+  -webkit-backface-visibility: hidden;
+}
+
+@-webkit-keyframes pulse {
+  from {
+    text-shadow: 0 0 10px #fff,
+               0 0 20px #fff,
+               0 0 30px #fff,
+               0 0 40px #ff00de,
+               0 0 70px #ff00de,
+               0 0 80px #ff00de,
+               0 0 100px #ff00de,
+               0 0 150px #ff00de;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #fff,
+               0 0 20px #ff00de,
+               0 0 35px #ff00de,
+               0 0 40px #ff00de,
+               0 0 50px #ff00de,
+               0 0 75px #ff00de;
+  }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1 class="title">QR Code Generator</h1>
+            <p class="subtitle">Convert any text or URL into a QR code</p>
+            
+            <div class="input-group">
+                <input type="text" id="qrText" placeholder="Enter text or URL..." class="input-field">
+                <button onclick="GenerateQRCode()" class="generate-btn">
+                    <i class="fas fa-qrcode"></i> Generate QR Code
+                </button>
+            </div>
+
+            <div class="qr-result" id="qrContainer">
+                <div class="qr-placeholder">
+                    <i class="fas fa-qrcode placeholder-icon"></i>
+                    <p>Your QR code will appear here</p>
+                </div>
+                <img src="" alt="Generated QR Code" id="qrImage" class="qr-image">
+                <a href="#" class="download-btn" id="downloadLink" download="qr-code.png">
+                    <i class="fas fa-download"></i> Download QR Code
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+@font-face {
+    font-family: 'Museo';
+    src: url("https://s.cdpn.io/26175/Museo300-Regular.otf") format("opentype");
+}
+
+.neon {
+    text-align: center;
+    margin: 30px auto;
+    font-family: "Museo";
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #fff;
+    animation: pulse 1.5s ease-in-out infinite alternate;
+    backface-visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.neon:hover {
+    transform: scale(1.05);
+}
+
+@keyframes pulse {
+    from {
+        text-shadow: 0 0 10px #fff,
+                     0 0 20px #fff,
+                     0 0 30px #fff,
+                     0 0 40px #ff00de,
+                     0 0 70px #ff00de,
+                     0 0 80px #ff00de,
+                     0 0 100px #ff00de,
+                     0 0 150px #ff00de;
+    }
+    to {
+        text-shadow: 0 0 5px #fff,
+                     0 0 10px #fff,
+                     0 0 15px #fff,
+                     0 0 20px #ff00de,
+                     0 0 35px #ff00de,
+                     0 0 40px #ff00de,
+                     0 0 50px #ff00de,
+                     0 0 75px #ff00de;
+    }
+}
+
+/* New global animation classes */
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-up {
+    animation: slideUp 0.8s ease-out;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.rotate {
+    transition: transform 0.5s ease;
+}
+
+.rotate:hover {
+    transform: rotate(5deg);
+}
+
+.scale {
+    transition: transform 0.3s ease;
+}
+
+.scale:hover {
+    transform: scale(1.05);
+}

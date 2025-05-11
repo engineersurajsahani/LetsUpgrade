@@ -1,0 +1,147 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 2.5em;
+    background-color: #171717;
+    border-radius: 25px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    margin: 100px auto;
+    max-width: 600px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    animation: formEntrance 0.8s ease-out;
+}
+
+@keyframes formEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.form:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 40px rgba(255, 0, 222, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#heading {
+    text-align: center;
+    margin: 1.5em 0;
+    color: rgb(255, 255, 255);
+    font-size: 1.8em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+#heading::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, rgb(0, 183, 255), rgb(255, 48, 255));
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8em;
+    border-radius: 25px;
+    padding: 0.8em;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #171717;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+    transition: all 0.3s ease;
+}
+
+.field:focus-within {
+    box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.5),
+                0 0 10px rgba(255, 0, 222, 0.3);
+    transform: translateY(-3px);
+}
+
+.input-icon {
+    height: 1.5em;
+    width: 1.5em;
+    fill: white;
+    transition: all 0.3s ease;
+}
+
+.field:focus-within .input-icon {
+    fill: rgb(255, 48, 255);
+    transform: scale(1.1);
+}
+
+.input-field {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #d3d3d3;
+    font-size: 1.1em;
+    padding: 0.5em;
+    transition: all 0.3s ease;
+}
+
+.input-field:focus {
+    color: white;
+}
+
+.form .btn {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 2em;
+}
+
+.button1, .button2, .button3 {
+    padding: 0.8em 1.8em;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    background: linear-gradient(135deg, #252525, #1a1a1a);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.button1::before, .button2::before, .button3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(135deg, rgb(0, 183, 255), rgb(255, 48, 255));
+    transition: width 0.4s ease;
+    z-index: -1;
+}
+
+.button1:hover::before, .button2:hover::before, .button3:hover::before {
+    width: 100%;
+}
+
+.button1:hover, .button2:hover, .button3:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 0, 222, 0.3);
+}
+
+.button3:hover::before {
+    background: linear-gradient(135deg, #ff3333, #ff6666);
+}

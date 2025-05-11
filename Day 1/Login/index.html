@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+        body {
+            background: linear-gradient(to right, #0f0f0f, #1a1f2b);
+
+
+        }
+
+        .flexbox {
+            display: flex;
+            flex-direction: row;
+            gap: 400px;
+        }
+
+        .flex-container {
+            margin-top: 100px;
+        }
+
+        h1 {
+            margin-left: 100px;
+        }
+    </style>
+    <link rel="stylesheet" href="ribbon-banner.css">
+    <link rel="stylesheet" href="animated-text.css">
+    <link rel="stylesheet" href="neon-text.css">
+    <link rel="stylesheet" href="input-box.css">
+    <link rel="stylesheet" href="button.css">
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+</head>
+
+<body>
+
+    <div class="ribbon">
+        <div class="ribbon-stitches-top"></div>
+        <div class="ribbon-content">
+            <p><b>LOGIN TO OUR SYSTEM 👨🏻‍💼</b></p>
+        </div>
+        <div class="ribbon-stitches-bottom"></div>
+    </div>
+
+    <div class="flexbox">
+        <div class="flex-container">
+            <dotlottie-player src="https://lottie.host/4e0a3bcf-8a34-4d4d-8424-978d3c685db3/ee4cshoZMC.lottie"
+                background="transparent" speed="1" style="width: 600px; height: 600px" loop autoplay></dotlottie-player>
+        </div>
+        <div class="flex-container">
+            <h1 class="neon">Welcome Again!</h1>
+
+            <!-- Username Field Start -->
+
+
+            <div id="poda">
+                <div class="glow"></div>
+
+                <div class="white"></div>
+
+                <div id="main">
+                    <input placeholder="Username..." type="text" name="text" class="input" />
+                </div>
+            </div>
+
+            <!-- Username Field End -->
+
+            <!-- Password Field Start -->
+
+
+            <div id="poda">
+                <div class="glow"></div>
+
+                <div class="white"></div>
+
+                <div id="main">
+                    <input placeholder="Password..." type="password" name="text" class="input" />
+                </div>
+            </div>
+
+            <!-- Password Field End -->
+
+            <!-- Submit Button Start -->
+            <!-- From Uiverse.io by gharsh11032000 -->
+            <button class="button">
+                Submit
+            </button>
+            <!-- Submit Button End  -->
+        </div>
+    </div>
+</body>
+
+</html>

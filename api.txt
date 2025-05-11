@@ -1,0 +1,15 @@
+Country API :- https://restcountries.com/v3.1/name/${countryName}?fullText=true
+
+GitHub API :- https://api.github.com/users/engineersurajsahani
+
+Weather API :- https://api.openweathermap.org/data/2.5/weather?q=${userInput}&units=metric&appid=${APIKey}
+
+QR Code Generator :- https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + qrText.value
+
+Employee API :- https://employee-api-using-nodejs.onrender.com/employee
+
+Assignment :- 
+
+Student API :- https://student-api-using-nodejs.onrender.com/student
+
+LinkedIn API 

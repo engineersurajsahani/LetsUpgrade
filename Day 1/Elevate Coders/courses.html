@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Elevate Coders Institute</title>
+    <!-- MDB UI Kit -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f0f0f, #1a1a1a, #2b2b2b);
+            min-height: 100vh;
+        }
+
+        .courses-section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: white;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, #00b7ff, #ff00de);
+        }
+
+        .section-header p {
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        .course-category {
+            margin-bottom: 50px;
+            animation: fadeIn 1s ease;
+        }
+
+        .category-title {
+            color: white;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+
+        .category-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(90deg, #00b7ff, #ff00de);
+        }
+
+        .course-card {
+            background: rgba(30, 30, 30, 0.7);
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(255, 0, 222, 0.3);
+        }
+
+        .course-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+
+        .course-card:hover .course-img {
+            transform: scale(1.05);
+        }
+
+        .course-content {
+            padding: 20px;
+        }
+
+        .course-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .course-price {
+            font-size: 1.3rem;
+            color: #ff00de;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .course-desc {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .course-meta {
+            display: flex;
+            justify-content: space-between;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .course-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            background: linear-gradient(135deg, #00b7ff, #0088cc);
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .course-btn:hover {
+            background: linear-gradient(135deg, #ff00de, #cc00b0);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 0, 222, 0.3);
+        }
+
+        .banner-section {
+            background: linear-gradient(135deg, rgba(0, 183, 255, 0.1), rgba(255, 0, 222, 0.1));
+            padding: 60px 0;
+            margin: 50px 0;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+        }
+
+        .banner-content h3 {
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .banner-content p {
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .banner-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #ff00de, #00b7ff);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 0, 222, 0.3);
+        }
+
+        .banner-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 0, 222, 0.4);
+        }
+    </style>
+    <link rel="stylesheet" href="neon-text.css">
+</head>
+
+<body>
+    <!-- Navbar (same as home.html) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="background: rgba(15, 15, 15, 0.8) !important; backdrop-filter: blur(10px);">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html">
+                <span class="neon" style="font-size: 1.5rem;">Elevate Coders</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-mdb-collapse-init data-mdb-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="courses.html"><i class="fas fa-graduation-cap me-2"></i>Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><i class="fas fa-user me-2"></i>About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><i class="fas fa-envelope me-2"></i>Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <a class="btn btn-outline-light btn-rounded me-3" href="#" role="button">
+                        <i class="fas fa-shopping-cart me-2"></i>Enroll Now
+                    </a>
+                    <div class="dropdown">
+                        <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar" role="button" data-mdb-dropdown-init aria-expanded="false">
+                            <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="35" alt="Profile" loading="lazy" />
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user-circle me-2"></i>My Profile</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Courses Section -->
+    <section class="courses-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="neon">Our Courses</h2>
+                <p>Choose from our wide range of industry-relevant courses designed to take your coding skills to the next level.</p>
+            </div>
+
+            <!-- Frontend Courses -->
+            <div class="course-category slide-up" style="animation-delay: 0.2s;">
+                <h3 class="category-title"><i class="fas fa-laptop-code me-2"></i> Frontend Development</h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="course-card">
+                            <img src="https://source.unsplash.com/random/300x200/?html" class="course-img" alt="HTML5 Course">
+                            <div class="course-content">
+                                <h3 class="course-title">HTML5 Mastery</h3>
+                                <div class="course-price">₹5,000</div>
+                                <p class="course-desc">Master the foundation of web development with our comprehensive HTML5 course.</p>
+                                <div class="course-meta">
+                                    <span><i class="fas fa-clock me-1"></i> 4 Weeks</span>
+                                    <span><i class="fas fa-user-graduate me-1"></i> Beginner</span>
+                                </div>
+                                <a href="#" class="course-btn">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="course-card">
+                            <img src="https://source.unsplash.com/random/300x200/?css" class="course-img" alt="CSS3 Course">
+                            <div class="course-content">
+                                <h3 class="course-title">CSS3 Styling</h3>
+                                <div class="course-price">₹6,000</div>
+                                <p class="course-desc">Learn to create beautiful, responsive websites with modern CSS techniques.</p>
+                                <div class="course-meta">
+                                    <span><i class="fas fa-clock me-1"></i> 6 Weeks</span>
+                                    <span><i class="fas fa-user-graduate me-1"></i> Beginner</span>
+                                </div>
+                                <a href="#" class="course-btn">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="course-card">
+                            <img src="https://source.unsplash.com/random/300x200/?javascript" class="course-img" alt="JavaScript Course">
+                            <div class="course-content">
+                                <h3 class="course-title">JavaScript Fundamentals</h3>
+                                <div class="course-price">₹7,000</div>
+                                <p class="course-desc">Unlock the power of JavaScript to create interactive web experiences.</p>
+                                <div class="course-meta">
+                                    <span><i class="fas fa-clock me-1"></i> 8 Weeks</span>
+                                    <span><i class="fas fa-user-graduate me-1"></i> Intermediate</span>
+                                </div>
+                                <a href="#" class="course-btn">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backend Courses -->
+            <div class="course-category slide-up" style="animation-delay: 0.4s;">
+                <h3 class="category-title"><i class="fas fa-server me-2"></i> Backend Development</h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="course-card">
+                            <img src="https://source.unsplash.com/random/300x200/?nodejs" class="course-img" alt="Node.js Course">
+                            <div class="course-content">
+                                <h3 class="course-title">Node.js Essentials</h3>
+                                <div class="course-price">₹8,000</div>
+                                <p class="course-desc">Build scalable server-side applications using Node.js and Express.</p>
+                                <div class="course-meta">
+                                    <span><i class="fas fa-clock me-1"></i> 10 Weeks</span>
+                                    <span><i class="fas fa-user-graduate me-1"></i> Intermediate</span>
+                                </div>
+                                <a href="#" class="course-btn">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="course-card">
+                            <img src="https://source.unsplash.com/random/300x200/?express" class="course-img" alt="Express.js Course">
+                            <div class="course-content">
+                                <h3 class="course-title">Express.js Framework</h3>
+                                <div class="course-price">₹6,000</div>
+                                <p class="course-desc">Master the Express framework for building robust web applications.</p>
+                                <div class="course-meta">
+                                    <span><i class="fas fa-clock me-1"></i> 6 Weeks</span>
+                                    <span><i class="fas fa-user-graduate me-1"></i> Intermediate</span>
+                                </div>
+                                <a href="#" class="course-btn">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="course-card">
+                            <img src="https://source.unsplash.com/random/300x200/?mongodb" class="course-img" alt="MongoDB Course">
+                            <div class="course-content">
+                                <h3 class="course-title">MongoDB Database</h3>
+                                <div class="course-price">₹8,000</div>
+                                <p class="course-desc">Learn NoSQL database concepts with MongoDB for modern applications.</p>
+                                <div class="course-meta">
+                                    <span><i class="fas fa-clock me-1"></i> 5 Weeks</span>
+                                    <span><i class="fas fa-user-graduate me-1"></i> Intermediate</span>
+                                </div>
+                                <a href="#" class="course-btn">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Frontend Frameworks -->
+            <div class="course-category slide-up" style="animation-delay: 0.6s;">
+                <h3 class="category-title"><i class="fas fa-layer-group me-2"></i> Frontend Frameworks</h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="course-card">
+                            <img src="https://source.unsplash.com/random/300x200/?react" class="course-img" alt="React.js Course">
+                            <div class="course-content">
+                                <h3 class="course-title">React.js Development</h3>
+                                <div class="course-price">₹7,000</div>
+                                <p class="course-desc">Build modern user interfaces with the popular React.js library.</p>
+                                <div class="course-meta">
+                                    <span><i class="fas fa-clock me-1"></i> 8 Weeks</span>
+                                    <span><i class="fas fa-user-graduate me-1"></i> Intermediate</span>
+                                </div>
+                                <a href="#" class="course-btn">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="course-card">
+                            <img src="https://source.unsplash.com/random/300x200/?angular" class="course-img" alt="Angular Course">
+                            <div class="course-content">
+                                <h3 class="course-title">Angular Framework</h3>
+                                <div class="course-price">₹8,000</div>
+                                <p class="course-desc">Develop enterprise-grade applications with Angular framework.</p>
+                                <div class="course-meta">
+                                    <span><i class="fas fa-clock me-1"></i> 10 Weeks</span>
+                                    <span><i class="fas fa-user-graduate me-1"></i> Advanced</span>
+                                </div>
+                                <a href="#" class="course-btn">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="course-card">
+                            <img src="https://source.unsplash.com/random/300x200/?vue" class="course-img" alt="Vue.js Course">
+                            <div class="course-content">
+                                <h3 class="course-title">Vue.js Fundamentals</h3>
+                                <div class="course-price">₹9,000</div>
+                                <p class="course-desc">Learn the progressive JavaScript framework Vue.js from scratch.</p>
+                                <div class="course-meta">
+                                    <span><i class="fas fa-clock me-1"></i> 7 Weeks</span>
+                                    <span><i class="fas fa-user-graduate me-1"></i> Intermediate</span>
+                                </div>
+                                <a href="#" class="course-btn">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Banner Section -->
+            <div class="banner-section fade-in" style="animation-delay: 0.8s;">
+                <div class="banner-content">
+                    <h3>Ready to Transform Your Career?</h3>
+                    <p>Join thousands of students who have successfully launched their tech careers with our comprehensive courses.</p>
+                    <a href="contact.html" class="banner-btn">Get Started Today</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Animate course cards on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const courseCards = document.querySelectorAll('.course-card');
+            
+            const animateCards = function() {
+                courseCards.forEach((card, index) => {
+                    const cardPosition = card.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (cardPosition < windowHeight - 100) {
+                        card.style.opacity = "1";
+                        card.style.transform = "translateY(0)";
+                    }
+                });
+            };
+            
+            window.addEventListener('scroll', animateCards);
+            animateCards(); // Run once on load
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div</title>
+    <style>
+        .box{
+           width: 100px; 
+           height: 100px;
+           background-color: red;
+           position: relative;
+           animation-name: moveRight;
+           animation-duration: 2s;
+           animation-iteration-count: infinite;
+           animation-direction: alternate;
+        }
+
+        @keyframes moveRight {
+            from{
+                left:0;
+            }
+            to{
+                right: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Software Developer
+    </div>
+</body>
+</html>

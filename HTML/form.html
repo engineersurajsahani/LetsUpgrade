@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+</head>
+
+<body>
+
+    <h1>Application Form</h1>
+
+    <form>
+
+        <div>
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname">
+
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname">
+        </div>
+
+        <div>
+            <label for="dob">Date Of Birth</label>
+            <input type="date" id="dob">
+
+            <label for="age">Age</label>
+            <input type="number" id="age">
+        </div>
+
+        <div>
+            <label for="gender">Gender</label>
+            <select name="" id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email">
+        </div>
+
+        <div>
+            <label for="positionsAvailable">Positions Available</label>
+            <input type="radio" name="positionsAvailable">Junior Developer
+            <input type="radio" name="positionsAvailable">Mid-Level Developer
+            <input type="radio" name="positionsAvailable">Senior Developer
+        </div>
+
+        <div>
+            <label for="programming">Programming Languages</label>
+            <input type="checkbox" name="programming">Java
+            <input type="checkbox" name="programming">Python
+            <input type="checkbox" name="programming">PHP
+        </div>
+
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password">
+
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword">
+        </div>
+
+        <div>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
+
+    </form>
+</body>
+
+</html>

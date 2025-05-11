@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Web Tech Stack</title>
+    <link rel="stylesheet" href="main-heading.css">
+
+    <style>
+        body {
+            background-color: #111827;
+            color: white;
+            text-align: center;
+        }
+
+        .grid-container {
+            margin-top: 50px;
+            margin-left: 50px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 100px 100px 100px;
+            gap: 90px;
+        }
+
+        .grid-item {
+            margin-top: 150px;
+            width: 200px;
+            height: 150px;
+            box-shadow: 4px 5px 11px 2px rgb(17, 17, 17);
+            transition: width 1s ease, height 1s ease;
+            animation-name: borderanimation;
+            animation-iteration-count: infinite;
+            animation-duration: 5s;
+            border-width: 10px;
+            border-color: red;
+            border-style: inset;
+        }
+
+        @keyframes borderanimation {
+            0% {
+                border-color: red;
+                border-style: inset;
+            }
+
+            10% {
+                border-color: rgb(203, 7, 82);
+                border-style: outset;
+            }
+
+            20% {
+                border-color: rgb(68, 9, 207);
+                border-style: inset;
+            }
+
+            30% {
+                border-color: rgb(6, 75, 213);
+                border-style: outset;
+            }
+
+            40% {
+                border-color: rgb(29, 236, 251);
+                border-style: inset;
+            }
+
+            50% {
+                border-color: rgb(6, 234, 181);
+                border-style: outset;
+            }
+
+            60% {
+                border-color: rgb(9, 223, 27);
+                border-style: inset;
+            }
+
+            70% {
+                border-color: rgb(123, 219, 6);
+                border-style: outset;
+            }
+
+            80% {
+                border-color: rgb(214, 177, 12);
+                border-style: inset;
+            }
+
+            90% {
+                border-color: rgb(229, 141, 8);
+                border-style: outset;
+            }
+
+            100% {
+                border-color: rgb(232, 14, 14);
+                border-style: inset;
+            }
+        }
+
+        .grid-item:hover {
+            width: 230px;
+            height: 160px;
+        }
+
+        img {
+            margin-top: 20px;
+            width: 150px;
+            height: 80px;
+        }
+    </style>
+    <link rel="stylesheet" href="elevate-coders.css">
+    <link rel="stylesheet" href="line.css">
+</head>
+
+<body>
+    <div class="lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <div>
+
+        <div class="ribbon">
+            <div class="ribbon-stitches-top"></div>
+            <div class="ribbon-content">
+                <p><b>Modern Web Tech Stack</b></p>
+            </div>
+            <div class="ribbon-stitches-bottom"></div>
+        </div>
+
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="html.svg" alt="">
+                <h3>HTML</h3>
+            </div>
+            <div class="grid-item">
+                <img src="css.svg" alt="">
+                <h3>CSS</h3>
+            </div>
+            <div class="grid-item">
+                <img src="javascript.svg" alt="">
+                <h3>JavaScript</h3>
+            </div>
+            <div class="grid-item">
+                <img src="react.svg" alt="">
+                <h3>React</h3>
+            </div>
+            <div class="grid-item">
+                <img src="nodejs.svg" alt="">
+                <h3>Node JS</h3>
+            </div>
+            <div class="grid-item">
+                <img src="express.png" alt="">
+                <h3>Express JS</h3>
+            </div>
+            <div class="grid-item">
+                <img src="mongodb.svg" alt="">
+                <h3>MongoDB</h3>
+            </div>
+        </div>
+
+
+        <div class="wrapper">
+            <svg>
+                <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                    Elevate Coders
+                </text>
+            </svg>
+        </div>
+
+    </div>
+</body>
+
+</html>
