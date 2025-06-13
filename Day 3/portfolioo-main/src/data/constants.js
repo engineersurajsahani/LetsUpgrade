@@ -219,7 +219,7 @@ export const skills = [
 export const experiences = [
   {
     id: 0,
-    img: "https://media.licdn.com/dms/image/v2/D4D0BAQE4j_HbhZgnHA/company-logo_200_200/company-logo_200_200/0/1738306641038/octalogic_logo?e=1749081600&v=beta&t=v2WxZnk0mZ7aO26uMRlP7JmcjiqGY-ZFZR-VMdb0QXw",
+    img: "https://media.licdn.com/dms/image/v2/D4D0BAQHCfqW5zQHwvw/company-logo_200_200/B4DZbynTz2GkAM-/0/1747827113727/octalogic_logo?e=1755129600&v=beta&t=LVdsXXnhN4UUp9mP0YoiRdCnKC2_c0BSvRxTs1CZimw",
     role: "Full Stack Developer",
     company: "Octalogic Tech",
     date: "November 2024 - Present",
@@ -237,7 +237,7 @@ export const experiences = [
   },
   {
     id: 1,
-    img: "https://media.licdn.com/dms/image/v2/D4D0BAQHx5oB2XiQATA/company-logo_200_200/company-logo_200_200/0/1719256960573/craftlabai_logo?e=1749081600&v=beta&t=00sw-iWo4BNdm0Mm2rDreSxsLsz70axdqL1OylEJRqQ",
+    img: "https://media.licdn.com/dms/image/v2/D4D0BAQHx5oB2XiQATA/company-logo_100_100/company-logo_100_100/0/1719255584057/craftlabai_logo?e=1755129600&v=beta&t=aoLYtxUXxsqKxw9fT7t-RlA6YdrMxKKU9KEWtNPJSEg",
     role: "Full Stack Developer",
     company: "Meta Craftlab Private Limited",
     date: "June 2024 - September 2024",
@@ -255,26 +255,7 @@ export const experiences = [
   },
   {
     id: 2,
-    img: "https://media.licdn.com/dms/image/v2/D560BAQGhWmpVzJuafQ/company-logo_200_200/company-logo_200_200/0/1712679472097/effilearn_institute_logo?e=1749081600&v=beta&t=YKHJqshxsbh-_-Co8kyTMYGE_8nykRipm5260ycSBZU",
-    role: "Web Application Development Trainer",
-    company: "Effilearn",
-    date: "June 2024 - Present",
-    desc: "Train IT/CS students in web application development using HTML, CSS, Tailwind CSS, JavaScript, React JS, Node.js, Express.js and MongoDB.",
-    skills: [
-      "HTML",
-      "CSS",
-      "Tailwind CSS",
-      "JavaScript",
-      "React JS",
-      "Node.js",
-      "Express JS",
-      "JWT",
-      "MongoDB"
-    ]
-  },
-  {
-    id: 3,
-    img: "https://media.licdn.com/dms/image/v2/C510BAQG_EYW2Utx9Ig/company-logo_200_200/company-logo_200_200/0/1630603273679/disha_computer_institute___india_logo?e=1749081600&v=beta&t=FjVbmf1l8eyEezjd6FC3V0UuaYyP_FaqgQPhgferYiE",
+    img: "https://media.licdn.com/dms/image/v2/C510BAQG_EYW2Utx9Ig/company-logo_200_200/company-logo_200_200/0/1630603273679/disha_computer_institute___india_logo?e=1755129600&v=beta&t=B7PILWzilrUm6Lg3HDMnzLKck4WHANS1l6Wp2FYKcZY",
     role: "IT Trainer",
     company: "Disha Computer Institute",
     date: "Sep 2023 - Present",
@@ -295,11 +276,52 @@ export const experiences = [
     // doc: "https://media.licdn.com/dms/image/D4D22AQGzSpgFaR4hsQ/feedshare-shrink_800/0/1684079632872?e=1687996800&v=beta&t=i0xWn_k32Oj9SxKfc6rARSbOghXD9Ge6WyEb2p2vvrc",
   },
   {
+    id: 3,
+    img: "https://media.licdn.com/dms/image/v2/C560BAQEyrvxV9GIsCA/company-logo_200_200/company-logo_200_200/0/1639331866887/letsupgrade_in_logo?e=1755129600&v=beta&t=CpCoSMNduc7ybLfcgpkQysrAtwlB0kZF4WWQkQ6mmbQ",
+    role: "IT Trainer",
+    company: "LetsUpgrade",
+    date: "March 2025 - Present",
+    desc: "Conduct training sessions for IT/CS candidates in various programming languages including C, C++, Java, Python, HTML, CSS, JavaScript, React JS, MySQL and Data  Structure.",
+    skills: [
+      "C",
+      "C++",
+      "Python",
+      "Java",
+      "Advance Java",
+      "Data Structure",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React JS",
+      "MySQL"
+    ]
+    // doc: "https://media.licdn.com/dms/image/D4D22AQGzSpgFaR4hsQ/feedshare-shrink_800/0/1684079632872?e=1687996800&v=beta&t=i0xWn_k32Oj9SxKfc6rARSbOghXD9Ge6WyEb2p2vvrc",
+  },
+  {
     id: 4,
+    img: "https://media.licdn.com/dms/image/v2/D560BAQGhWmpVzJuafQ/company-logo_200_200/company-logo_200_200/0/1712679472097/effilearn_institute_logo?e=1755129600&v=beta&t=cCM__KyPaJiHUx7FtTNbu3e9gekJa2F4KqNRfWVVo3s",
+    role: "Web Application Development Trainer",
+    company: "Effilearn",
+    date: "June 2024 - March 2025",
+    desc: "Train IT/CS students in web application development using HTML, CSS, Tailwind CSS, JavaScript, React JS, Node.js, Express.js and MongoDB.",
+    skills: [
+      "HTML",
+      "CSS",
+      "Tailwind CSS",
+      "JavaScript",
+      "React JS",
+      "Node.js",
+      "Express JS",
+      "JWT",
+      "MongoDB"
+    ]
+  },
+  {
+    id: 5,
     img: "https://ycc.edu.in/wp-content/uploads/2023/04/ycc-logo.png",
     role: "Assistant Professor",
     company: "Yashwantrao Chavan College",
-    date: "Jan 2024 - Mar 2024",
+    date: "Jan 2024 - Mar 2025",
     desc: "Teaching responsibilities in the Computer Science/Information Technology department. Teach Web Application Development, Object-Oriented Programming with C++, Design and Analysis of Algorithms, Core Java, Data Structures, Database Management System and Operating System.",
     skills: [
       "C",
@@ -317,7 +339,7 @@ export const experiences = [
    // doc: "https://media.licdn.com/dms/image/D4D2DAQFlp60ZqHuaFQ/profile-treasury-image-shrink_1280_1280/0/1691180828512?e=1692381600&v=beta&t=mM5Y_NE5EPlQhez5FAN6NLVSKcO_Ojt_9Gq3mnFGkAQ",
   },
   {
-    id: 5,
+    id: 6,
     img: eiImage,
     role: "Science & Maths Tutor",
     company: "Elevate Intelligence",
@@ -331,8 +353,8 @@ export const experiences = [
     ]
   },
   {
-    id: 5,
-    img: "https://media.licdn.com/dms/image/v2/C4D0BAQE6a5SLEltPTw/company-logo_200_200/company-logo_200_200/0/1642221722191/efficient_corporates_logo?e=1749081600&v=beta&t=1rFOZEeXFoF5RSiqQFx2RNH_EFXxFyOa13AnAAvf1Q0",
+    id: 7,
+    img: "https://media.licdn.com/dms/image/v2/C4D0BAQE6a5SLEltPTw/company-logo_200_200/company-logo_200_200/0/1642221722191/efficient_corporates_logo?e=1755129600&v=beta&t=MUQ8TfdSgYeE7wyS3QTvkieX5NsnoVPMl2_aTyZtmlo",
     role: "Web Application Development Intern",
     company: "Efficient Corporates",
     date: "June 2023 - Sep 2023",
